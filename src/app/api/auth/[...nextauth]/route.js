@@ -1,9 +1,10 @@
+import mongoose from "mongoose";
+import NextAuth from "next-auth/next";
 import { User } from '../../../models/User';
 import bcrypt from "bcrypt";
 import CredentialsProvider from "next-auth/providers/credentials";
+import { getServerSession } from "next-auth";
 import { UserInfo } from "../../../models/UserInfo";
-import * as mongoose from "mongoose";
-import NextAuth, {getServerSession} from "next-auth";
 
 export const authOptions1={
   secret:process.env.SECRET,
@@ -16,6 +17,7 @@ export const authOptions1={
             password: { label: "Password", type: "password" }
           },
           async authorize(credentials, req) {
+            // const {email,password}=credentials;
             const email=credentials?.email;
             const password=credentials?.password;
             mongoose.connect(process.env.MONGO_URL);
