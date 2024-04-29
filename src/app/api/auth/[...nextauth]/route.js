@@ -80,19 +80,6 @@ export const authOptions1 = {
   ],
 };
 
-export async function isAdmin() {
-  const session = await getServerSession(authOptions1);
-  const userEmail = session?.user?.email;
-  if (!userEmail) {
-    return false;
-  }
-  const userInfo = await UserInfo.findOne({ email: userEmail });
-  if (!userInfo) {
-    return false;
-  }
-  return userInfo.admin;
-}
-
 const handler = NextAuth(authOptions1);
 
 export { handler as GET, handler as POST };
