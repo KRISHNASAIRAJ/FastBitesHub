@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import UserTabs from "../../components/layout/UserTabs";
 import UserForm from "../../components/layout/UserForm";
 import toast from 'react-hot-toast';
-import EditableImage from "@/components/layout/EditableImage";
+import EditableImage from "../../components/layout/EditableImage";
 import InfoBox from "@/components/layout/InfoBox";
 import SuccessBox from "@/components/layout/SuccessBox";
 import Image from "next/image";

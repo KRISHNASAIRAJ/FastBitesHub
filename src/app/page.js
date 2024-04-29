@@ -1,14 +1,15 @@
-import Header from "@/components/layout/Header";
-import Hero from "@/components/layout/Hero";
-import HomeMenu from "@/components/layout/HomeMenu";
-import SectionHeaders from "@/components/layout/SectionHeaders";
+import Header from "../components/layout/Header";
+import Hero from "../components/layout/Hero";
+import HomeMenu from "../components/layout/HomeMenu";
+import SectionHeaders from "../components/layout/SectionHeaders";
+import toast from 'react-hot-toast';
+
 export default function Home() {
   return (
-    <>
-      
+    <> 
       <Hero />
       <HomeMenu />
-      <section className="text-center my-16">
+      <section className="text-center my-16" id="about" >
         <SectionHeaders subHeader={"Our Story"} mainHeader={"About Us"} />
         <div className="text-gray-500 max-w-2xl mx-auto mt-4 flex flex-col gap-4">
           <p className="mt-4">
@@ -30,7 +31,7 @@ export default function Home() {
           </p>
         </div>
       </section>
-      <section className="text-center my-8">
+      <section className="text-center my-8" id="contact" >
         <SectionHeaders
           subHeader={"Don't Hesitate"}
           mainHeader={"Contact Us"}

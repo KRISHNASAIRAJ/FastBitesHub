@@ -42,7 +42,7 @@ export default function MenuItemForm({ onSubmit, menuItem }) {
       }
     >
       <div
-        className="flex items-start gap-4"
+        className="md:grid items-start gap-4"
         style={{ gridTemplateColumns: ".3fr .7fr" }}
       >
         <div>

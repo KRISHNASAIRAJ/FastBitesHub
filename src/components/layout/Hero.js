@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="hero mt-4" >
       <div className="py-16">
         <h1 className="text-4xl font-semibold">Savor Speed,<br></br>Taste<br></br> <span 
-          className="text-primary">Instant Happiness
+          className="text-primary">Instant Happine    ss
           </span></h1>
         <p className="my-6 text-gray-500 text-sm">
         Crunchy tacos, spicy salsa - a taste of Mexico, right at your fingertips.
@@ -21,7 +21,7 @@ export default function Hero() {
           </button>
         </div>
       </div>
-      <div className="relative">
+      <div className="relative hidden md:block">
         <Image
           src={"/food_1.png"}
           layout={"fill"}
