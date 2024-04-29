@@ -95,4 +95,4 @@ export async function isAdmin() {
 
 const handler = NextAuth(authOptions1);
 
-export { handler as GET, handler as POST, isAdmin };
+export { handler as GET, handler as POST };
