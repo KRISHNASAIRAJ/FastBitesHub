@@ -13,7 +13,7 @@ export default function Home() {
         <SectionHeaders subHeader={"Our Story"} mainHeader={"About Us"} />
         <div className="text-gray-500 max-w-2xl mx-auto mt-4 flex flex-col gap-4">
           <p className="mt-4">
-            At Fast Bites Hub, we're passionate about making food ordering fast,
+            At Fast Bites Hub, we are passionate about making food ordering fast,
             easy, and enjoyable for everyone. Our platform was founded with the
             vision of revolutionizing the way people order their favorite meals
             online, providing a seamless experience that satisfies cravings and
