@@ -43,6 +43,6 @@ export async function isAdmin() {
   return userInfo.admin;
 }
 
-const handler= NextAuth(authOptions1);
+export const handler= NextAuth(authOptions1);
 
 export {handler as GET,handler as POST}
