@@ -11,6 +11,10 @@ export default function RegisterPage() {
   const [error,setError]=useState(false);
   async function handleFormSubmit(ev) {
     ev.preventDefault();
+    if (!email || !password || password.length < 6) {
+      setError(true);
+      return;
+    }
     setCreatingUser(true);
     setError(false);
     setUserCreated(false);

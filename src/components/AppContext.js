@@ -33,6 +33,7 @@ export function AppProvider({ children }) {
     setCartProducts([]);
     saveCartProductsToLocalStorage([]);
   }
+  
   function removeCartProduct(indexToRemove) {
     setCartProducts(prevCartProducts => {
       const newCartProducts = prevCartProducts
