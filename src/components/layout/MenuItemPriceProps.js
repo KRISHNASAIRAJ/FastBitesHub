@@ -60,6 +60,7 @@ export default function MenuItemPriceProps({
               placeholder="Extra Price"
               value={quantityT.price}
               onChange={(ev) => editProp(ev, index, "price")}
+              onClick={(ev) => ev.target.value = ""} 
             />
             <div>
               <button
