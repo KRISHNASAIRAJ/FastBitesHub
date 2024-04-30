@@ -6,8 +6,14 @@ export default function LoginPage() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loginInProgress,setLoginInProgress]=useState(false);
+    const [error, setError] = useState(null);
     async function handleFormSubmit(ev){
         ev.preventDefault();
+        if (!email || !password) {
+          setError("Please enter your email and password.");
+          return;
+        }
+        setError(null); 
         setLoginInProgress(true);
         await signIn('credentials',{email,password,callbackUrl:'/'});
         setLoginInProgress(false);
