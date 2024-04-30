@@ -2,11 +2,8 @@
 import { useContext, useEffect, useState } from "react";
 import SectionHeaders from "../../components/layout/SectionHeaders";
 import { CartContext, cartProductPrice } from "../../components/AppContext";
-import Image from "next/image";
-import Trash from "../../components/icons/Trash";
 import AddressInputs from "../../components/layout/AddressInputs";
 import { useProfile } from "../../components/useProfile";
-import cartProduct from '../../components/menu/CartProduct';
 import CartProduct from "../../components/menu/CartProduct";
 
 export default function CartPage() {
@@ -66,11 +63,11 @@ export default function CartPage() {
       
     }
   )
-  // await toast.promise(promise, {
-  //   loading: 'Preparing your order...',
-  //   success: 'Redirecting to payment...',
-  //   error: 'Something went wrong... Please try again later',
-  // })
+  await toast.promise(promise, {
+    loading: 'Preparing your order...',
+    success: 'Redirecting to payment...',
+    error: 'Something went wrong... Please try again later',
+  })
   }
 
   if (cartProducts?.length === 0) {
@@ -95,6 +92,7 @@ export default function CartPage() {
             cartProducts.map((product, index) => (
               <CartProduct
               key={index}
+              index={index}
               product={product} onRemove={removeCartProduct}/>
             ))}
           <div className="py-2 pr-16 flex justify-end items-center">

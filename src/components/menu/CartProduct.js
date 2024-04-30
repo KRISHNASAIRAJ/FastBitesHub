@@ -2,19 +2,19 @@ import {cartProductPrice} from "../AppContext";
 import Trash from "../icons/Trash";
 import Image from "next/image";
 
-export default function CartProduct({product,onRemove}) {
+export default function CartProduct({product,onRemove,index}) {
   return (
     <div className="flex items-center gap-4 border-b py-4">
       <div className="w-24">
-        <Image width={240} height={240} src={product.image} alt={''} />
+        <Image className="rounded-lg" width={240} height={240} src={product.image} alt={''} />
       </div>
       <div className="grow">
         <h3 className="font-semibold">
           {product.name}
         </h3>
-        {product.quantityType && (
+        {product.quantityTypes && (
           <div className="text-sm">
-            quantityType: <span>{product.quantityType.name}</span>
+            Size: <span>{product.quantityTypes.name}</span>
           </div>
         )}
         {product.extras?.length > 0 && (

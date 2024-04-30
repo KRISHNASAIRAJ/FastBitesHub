@@ -8,7 +8,7 @@ import { UserInfo } from "../../../models/UserInfo";
 
 export const authOptions1={
   secret:process.env.SECRET,
-    providers: [
+    providers: [  
         CredentialsProvider({
         name: "Credentials",
         id:'credentials',
