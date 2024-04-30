@@ -5,6 +5,7 @@ import { CartContext, cartProductPrice } from "../../components/AppContext";
 import AddressInputs from "../../components/layout/AddressInputs";
 import { useProfile } from "../../components/useProfile";
 import CartProduct from "../../components/menu/CartProduct";
+import toast from "react-hot-toast";
 
 export default function CartPage() {
   const { cartProducts, removeCartProduct } = useContext(CartContext);

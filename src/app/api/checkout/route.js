@@ -22,8 +22,8 @@ export async function POST(req){
     for(const cartProduct of cartProducts){
         const productInfo=await MenuItem.findById(cartProduct._id);
         let productPrice=productInfo.price;
-        if(cartProduct.size){
-            const size=productInfo.sizes.find(size=>size._id.toString()===cartProduct.size._id.toString());
+        if(cartProduct.quantityTypes){
+            const size=productInfo.quantityType.find(size=>size._id.toString()===cartProduct.quantityTypes._id.toString());
             productPrice+=size.price;
         }
         if(cartProduct.extras?.length>0){
