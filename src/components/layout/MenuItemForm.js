@@ -1,8 +1,6 @@
 import EditableImage from "../layout/EditableImage";
 import MenuItemPriceProps from "../layout/MenuItemPriceProps";
 import { useEffect, useState } from "react";
-import Plus from '../icons/Plus';
-import Trash from "../icons/Trash";
 
 export default function MenuItemForm({ onSubmit, menuItem }) {
   const [image, setImage] = useState(menuItem?.image || "");
@@ -25,7 +23,6 @@ export default function MenuItemForm({ onSubmit, menuItem }) {
       });
     });
   }, []);
-
   return (
     <form
       className="mt-8 max-w-2xl mx-auto"
@@ -63,6 +60,7 @@ export default function MenuItemForm({ onSubmit, menuItem }) {
           />
           <label>Category</label>
           <select value={category} onChange={ev=>setCategory(ev.target.value)}>
+          <option value="none">Select Category</option>
             {categories?.length > 0 &&
               categories.map((c) => <option key={c._id} value={c._id}>{c.name}</option>)}
           </select>
