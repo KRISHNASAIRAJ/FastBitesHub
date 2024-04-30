@@ -11,7 +11,7 @@ export default function RegisterPage() {
   const [error,setError]=useState(false);
   async function handleFormSubmit(ev) {
     ev.preventDefault();
-    if (!email || !password || password.length < 6) {
+    if (!isEmailValid(email) || password.length < 6) {
       setError(true);
       return;
     }
@@ -30,6 +30,10 @@ export default function RegisterPage() {
       setError(true);
     }
     setCreatingUser(false);
+  }
+  function isEmailValid(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
   }
   return (
     <section className="mt-8">
